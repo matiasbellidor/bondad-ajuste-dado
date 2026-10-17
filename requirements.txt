@@ -1,0 +1,8 @@
+numpy>=1.24.0
+opencv-python>=4.8.0
+scipy>=1.11.0
+matplotlib>=3.7.0
+supervision>=0.20.0
+# Optional — only needed for `python main.py --mode roboflow`
+# (set ROBOFLOW_API_KEY in the environment):
+# inference>=0.29.0
