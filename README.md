@@ -1,12 +1,12 @@
 # 🎲 Bondad de Ajuste χ² con Computer Vision (`supervision` + OpenCV)
 
-Pipeline *end-to-end* que conecta **Computer Vision en tiempo real** con **Inferencia Estadística paramétrica y no paramétrica** (Análisis Estadístico II). El sistema detecta y contabiliza tiradas de 5 dados mediante cámara o simulación sintética utilizando [`roboflow/supervision`](https://github.com/roboflow/supervision), almacena las observaciones en una base de datos transaccional **SQLite** y ejecuta pruebas rigurosas de **Bondad de Ajuste Chi-Cuadrado (χ²)** con nivel de significación **α = 0.05**.
+Pipeline *end-to-end* que conecta **Visión por Computadora en tiempo real** con **Inferencia Estadística paramétrica y no paramétrica** (Análisis Estadístico II). El sistema detecta y contabiliza tiradas de 5 dados mediante cámara o simulación sintética utilizando [`roboflow/supervision`](https://github.com/roboflow/supervision), almacena las observaciones en una base de datos transaccional **SQLite** y ejecuta pruebas rigurosas de **Bondad de Ajuste Chi-Cuadrado (χ²)** con nivel de significación **α = 0.05**.
 
 ---
 
 ## 📊 Dashboard de Resultados (n = 422 tiradas)
 
-![Dashboard de Bondad de Ajuste](assets/dashboard_bondad_ajuste.jpg)
+![Dashboard de Bondad de Ajuste](assets/dashboard_bondad_ajuste.png)
 
 ---
 
@@ -28,7 +28,7 @@ El motor visual procesa el stream de video en vivo (cámara cenital / Iriun Webc
 
 | Captura Real con Cámara Cenital (`Mode: CV`) | Simulador Sintético Integrado (`Mode: Sim`) |
 | :---: | :---: |
-| ![Detección Cámara Real](assets/deteccion_camara_real.jpg) | ![Detección Modo Sintético](assets/deteccion_modo_sintetico.jpg) |
+| ![Detección Cámara Real](assets/deteccion_camara_real.png) | ![Detección Modo Sintético](assets/deteccion_modo_sintetico.png) |
 | *Aislamiento de ROIs, filtrado morfológico y conteo de pips en la cara superior.* | *Generación procedural y validación automática del pipeline con `supervision`.* |
 
 ---
@@ -123,9 +123,9 @@ python main.py --camera 1
 ```text
 bondad-ajuste-dado/
 ├── assets/
-│   ├── dashboard_bondad_ajuste.jpg      # Gráfico principal con resultados (n = 422)
-│   ├── deteccion_camara_real.jpg        # Captura del detector en cámara cenital
-│   └── deteccion_modo_sintetico.jpg     # Captura del detector en modo simulador
+│   ├── dashboard_bondad_ajuste.png      # Gráfico principal con resultados (n = 422)
+│   ├── deteccion_camara_real.png        # Captura del detector en cámara cenital
+│   └── deteccion_modo_sintetico.png     # Captura del detector en modo simulador
 ├── main.py                              # Código fuente completo (CV + SQLite + Motor Chi2)
 ├── requirements.txt                     # Dependencias del proyecto
 └── README.md                            # Documentación técnica y estadística
